@@ -1,0 +1,31 @@
+{
+  "name": "mongoose-uploaded-file",
+  "version": "1.0.0",
+  "description": "Adiciona o tipo 'UploadedFile' ao mongoose para verificar arquivos no disco.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LogicamenteInfo/mongoose-uploaded-file.git"
+  },
+  "keywords": [
+    "mongoose",
+    "upload"
+  ],
+  "author": {
+    "name": "Logicamente Info",
+    "email": "contato@logicamente.info"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mocha": "^7.1.1",
+    "mongoose": "^5.9.7",
+    "should": "6.0.x"
+  },
+  "peerDependencies": {
+    "mongoose": "~> 4.x"
+  }
+}

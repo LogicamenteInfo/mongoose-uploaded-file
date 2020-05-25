@@ -57,7 +57,7 @@ describe("UploadedFile Type", function () {
     it("should not be saved", function (done) {
       const product = new Product({ photo: "/demo/does_not_exists.jpg" });
       product.save(function (err, new_product) {
-        err.toString().should.equal("ValidationError: photo: Não existe arquivo no local informado para photo: '/demo/does_not_exists.jpg'");
+        err.toString().should.equal("ValidationError: photo: File path set to photo does not exists: '/demo/does_not_exists.jpg'");
         done();
       });
     });

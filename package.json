@@ -1,7 +1,7 @@
 {
   "name": "mongoose-uploaded-file",
   "version": "1.0.0",
-  "description": "Adiciona o tipo 'UploadedFile' ao mongoose para verificar arquivos no disco.",
+  "description": "Adds the SchemaType 'UploadedFile' to mongoose in order to verify if file exists.",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"

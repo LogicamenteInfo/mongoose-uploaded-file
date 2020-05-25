@@ -1,45 +1,45 @@
 # mongoose-uploaded-file
 
-SchemaType específico para armazenar caminhos de arquivos salvos no disco.
+This is a mongoose SchemaType to store path of saved files.
 
-## O que isto faz
+## What it does
 
-* Salva uma String contendo o caminho de um arquivo salvo no disco do dispositivo rodando esta biblioteca
-* Valida se o arquivo existe antes de salvar banco
+* Save a String contaning the path to a file saved at device disk
+* Validates if the file exists before saving at database
 
-## Como usar
+## How to use
 
 ```JavaScript
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-// Adicione o tipo UploadedFile ao Mongoose
+// Add the UploadedFile SchemaType to mongoose
 require('mongoose-uploaded-file').loadType(mongoose);
 const UploadedFile = mongoose.Types.UploadedFile;
 
-// Se você não tiver declarado a constante UploadedFile
-// você poderá utilizar 'mongoose.Types.UploadedFile'
-const ProdutoSchema = Schema({
-  foto: { type: UploadedFile }
+// If you haven't declared the const UploadedFile
+// you can use 'mongoose.Types.UploadedFile'
+const ProductSchema = Schema({
+  photo: { type: UploadedFile }
 });
 
-const Produto = mongoose.model('Produto', ProdutoSchema);
+const Product = mongoose.model('Product', ProductSchema);
 
-const produto = new Produto();
-produto.foto = '/upload/foto.jpg'
+const p = new Product();
+p.photo = '/upload/photo.jpg'
 ```
 
 ### Schema options
 
-Aceita todas propriedades do [esquema de opções de string](https://mongoosejs.com/docs/schematypes.html#strings) do mongoose.
+It accepts all properties from mongoose [String SchemaType](https://mongoosejs.com/docs/schematypes.html#strings).
 
 ```JavaScript
-// Irá transformar o valor para minúsculo, remover espaços em branco
-// antes e depois da string, e validar se o arquivo existe no disco
-var ProdutoSchema = Schema({
-  foto: { type: UploadedFile, required: true, lowercase: true, trim: true }
+// This will transform the path into lowercase, then remove blank space
+// at start and end, then validates if the file exists
+var ProductSchema = Schema({
+  photo: { type: UploadedFile, required: true, lowercase: true, trim: true }
 });
 ```
 
-## Testando
+## Testing
 
-Na raiz do diretório do projeto, execute `npm test`
+At root of this project, run `npm test`

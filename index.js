@@ -11,7 +11,7 @@ function UploadedFile(path, options) {
   mongoose.SchemaTypes.String.call(this, path, options);
   this.validators.push({
     validator: (path) => fs.existsSync(`./${path}`) || fs.existsSync(path),
-    message: (props) => `Não existe arquivo no local informado para ${props.path}: '${props.value}'`
+    message: (props) => `File path set to ${props.path} does not exists: '${props.value}'`
   });
 }
 

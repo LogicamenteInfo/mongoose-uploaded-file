@@ -7,13 +7,20 @@ This is a mongoose SchemaType to store path of saved files.
 * Save a String contaning the path to a file saved at device disk
 * Validates if the file exists before saving at database
 
+## Installation
+
+```bash
+$ npm i -S @logicamente.info/mongoose-uploaded-file # NPM users
+$ yarn add @logicamente.info/mongoose-uploaded-file # YARN users
+```
+
 ## How to use
 
 ```JavaScript
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // Add the UploadedFile SchemaType to mongoose
-require('mongoose-uploaded-file').loadType(mongoose);
+require('@logicamente.info/mongoose-uploaded-file').loadType(mongoose);
 const UploadedFile = mongoose.Types.UploadedFile;
 
 // If you haven't declared the const UploadedFile

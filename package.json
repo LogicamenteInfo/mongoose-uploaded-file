@@ -1,6 +1,6 @@
 {
   "name": "@logicamente.info/mongoose-uploaded-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds the SchemaType 'UploadedFile' to mongoose in order to verify if file exists.",
   "main": "index.js",
   "scripts": {
@@ -22,10 +22,10 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "mocha": "^7.1.1",
-    "mongoose": "^5.9.7",
+    "mongoose": "^5.13.5",
     "should": "6.0.x"
   },
   "peerDependencies": {
-    "mongoose": "~> 4.x"
+    "mongoose": ">=4.x"
   }
 }
